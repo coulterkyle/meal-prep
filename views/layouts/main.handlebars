@@ -1,12 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meal Prep</title>
-    <p>branch set-up</p>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meal Prep</title>
+  <link rel="stylesheet" type="text/css" href="/css/jass.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
+
 <body>
-    
+  <header>
+    <h1>Welcome to Meal Prep!</h1>
+  </header>
+  <nav>
+    <a href="/">Home</a>
+    {{#if loggedIn}}
+    <a href="/fridge">In My Fridge</a>
+    <a href="/meals">My Meals</a>
+    <button id="logout" class="btn-no-style">Logout</button>
+    <script src="./js/logout.js"></script>
+    {{else}}
+    <a href="/login">Login</a>
+    {{/if}}
+  </nav>
+  <main>
+    <div>
+      {{{body}}}
+    </div>
+  </main>
 </body>
+
 </html>
