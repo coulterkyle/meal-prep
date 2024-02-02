@@ -41,8 +41,8 @@ router.get('/dashboard', withAuth, async (req, res) => {
 
 // GET for Recipes search
 router.get('/recipes/:search', async (req, res) => {
-  console.log(req.params)
-  let recipeURL = `https://api.edamam.com/api/recipes/v2?type=public&q=chicken&app_id=${process.env.APP_ID}&app_key=${process.env.API_KEY}`;
+  console.log("from here", req.params)
+  let recipeURL = `https://api.edamam.com/api/recipes/v2?type=public&q=${req.params.search}&app_id=${process.env.APP_ID}&app_key=${process.env.API_KEY}`;
   let data = await fetch(recipeURL);
   const newdata = await data.json();
   var hits = newdata.hits
