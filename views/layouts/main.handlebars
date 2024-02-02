@@ -10,21 +10,48 @@
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body>
+<body style="background-image: url('C:\Users\micha\OneDrive\Desktop\Bootcamp\Projects\Project2\meal-prep\assets\images\page photos\page pic.jpg')">
   <header>
-    <h1>Welcome to Meal Prep!</h1>
+    <h1>KMC! Your kitchen in the palm of your hand!</h1>
   </header>
-  <nav>
-    <a href="/">Home</a>
-    {{#if loggedIn}}
-    <a href="/fridge">In My Fridge</a>
-    <a href="/recipes">Search for Meals</a>
-    <button id="logout" class="btn-no-style">Logout</button>
-    <script src="/js/logout.js"></script>
-    {{else}}
-    <a href="/login">Login</a>
-    <a href="/register">Register</a>
-    {{/if}}
+  
+  <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+        aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="/">Home</a>
+          </li>
+          {{#if loggedIn}}
+          <li class="nav-item">
+            <a class="nav-link" href="/fridge">My Fridge</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/meals">My Meals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">My Shopping List</a>
+          </li>
+          <button type="button" id="logout" class="btn btn-dark">Logout</button>
+          <script src="./js/logout.js"></script>
+          {{else}}
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/register">Register</a>
+          </li>
+          {{/if}}
+          <form class="d-flex">
+            <img
+              src="C:\Users\micha\OneDrive\Desktop\Bootcamp\Projects\Project2\meal-prep\assets\images\logos\k-c-m-logo-color-on-white.png"
+              alt="KCM Logo">
+          </form>
   </nav>
   <main>
     <div>
