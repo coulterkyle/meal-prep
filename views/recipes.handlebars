@@ -1,1 +1,29 @@
-search for recipes
+<div class="input-group">
+  <input type="search" id="searchInput" class="form-control rounded" placeholder="Search for Recipes"
+    aria-label="Search" aria-describedby="search-addon" />
+  <button type="button" id="search-button" class="btn btn-outline-primary">search</button>
+</div>
+
+
+
+{{#each hits as |hit|}}
+<div class="card" style="width: 18rem;">
+  <img src="{{hit.recipe.images.THUMBNAIL.url}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{hit.recipe.label}}</h5>
+    <p class="card-text">{{hit.recipe.calories}}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>
+{{/each}}
+
+
+<script src="/js/recipe.js"></script>
