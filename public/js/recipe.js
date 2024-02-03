@@ -8,12 +8,7 @@ const addToButton = document.querySelectorAll('#add-recipe')
 
 
 async function addToMeals(uri) {
-    // event.preventDefault();
-    // const recipeIdentifier = document.querySelector("add-recipe").className;
-    // alert(recipeIdentifier);
-    // const search = recipeIdentifier;
     const search = uri;
-    alert(uri);
     let getRequest;
     if (search) {
         getRequest = await fetch('http://localhost:3001/api/recipes', {
@@ -38,6 +33,15 @@ async function addToMeals(uri) {
     // }
 }
 
+async function deleteMeals(id){
+    if (id){
+        deleteRequest = await fetch(`http://localhost:3001/api/recipes/${id}`, {
+            method: "DELETE",
+            headers: { 'Content-Type': 'application/json' },
+        });
+    }
+    document.location.reload()
+}
 const result = submitBtn.addEventListener('click', searchEvent);
 
 async function searchEvent(event) {
