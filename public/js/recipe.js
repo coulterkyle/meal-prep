@@ -33,15 +33,15 @@ async function addToMeals(uri) {
     // }
 }
 
-async function deleteMeals(id){
-    if (id){
-        deleteRequest = await fetch(`http://localhost:3001/api/recipes/${id}`, {
-            method: "DELETE",
-            headers: { 'Content-Type': 'application/json' },
-        });
-    }
-    document.location.reload()
-}
+// async function deleteMeals(id){
+//     if (id){
+//         deleteRequest = await fetch(`http://localhost:3001/api/recipes/${id}`, {
+//             method: "DELETE",
+//             headers: { 'Content-Type': 'application/json' },
+//         });
+//     }
+//     document.location.reload()
+// }
 const result = submitBtn.addEventListener('click', searchEvent);
 
 async function searchEvent(event) {
