@@ -2,15 +2,18 @@ const searchParam = document.getElementById('searchInput');
 const submitBtn = document.getElementById('search-button')
 const addToButton = document.querySelectorAll('#add-recipe')
 
-for (let i = 0; i < addToButton.length; i++){
-    addToButton[i].addEventListener('click', addToMeals);
-}
+// for (let i = 0; i < addToButton.length; i++){
+//     addToButton[i].addEventListener('click', addToMeals(this.className));
+// }
 
 
-async function addToMeals(event) {
-    event.preventDefault();
-    const recipeIdentifier = document.querySelector("#classIdentifier").className;
-    const search = recipeIdentifier;
+async function addToMeals(uri) {
+    // event.preventDefault();
+    // const recipeIdentifier = document.querySelector("add-recipe").className;
+    // alert(recipeIdentifier);
+    // const search = recipeIdentifier;
+    const search = uri;
+    alert(uri);
     let getRequest;
     if (search) {
         getRequest = await fetch('http://localhost:3001/api/recipes', {
