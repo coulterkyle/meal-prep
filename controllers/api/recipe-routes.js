@@ -9,7 +9,6 @@ router.post('/', async (req, res) => {
     let recipeUri = `https://api.edamam.com/api/recipes/v2/by-uri?type=public&uri=${encodedUri}&app_id=${process.env.APP_ID}&app_key=${process.env.API_KEY}`;
     let data = await fetch(recipeUri);
     const newData = await data.json();
-    console.log(recipeUri)
     const newEntry = await Recipe.create({
       recipe_name: newData.hits[0].recipe.label,
       recipe_ingredients: newData.hits[0].recipe.ingredientLines,
