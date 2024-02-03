@@ -11,6 +11,7 @@ router.post('/', async (req, res) => {
     const newData = await data.json();
     const newEntry = await Recipe.create({
       recipe_name: newData.hits[0].recipe.label,
+      recipe_thumbnail: newData.hits[0].recipe.images.REGULAR.url,
       recipe_ingredients: newData.hits[0].recipe.ingredientLines,
       recipe_calories: newData.hits[0].recipe.calories,
       recipe_instructions: newData.hits[0].recipe.source,
