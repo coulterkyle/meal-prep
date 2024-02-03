@@ -1,26 +1,31 @@
-<div class="input-group">
+<div class="input-group" style="margin-top: 50px; 
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;">
   <input type="search" id="searchInput" class="form-control rounded" placeholder="Search for Recipes"
     aria-label="Search" aria-describedby="search-addon" />
   <button type="button" id="search-button" class="btn btn-outline-primary">search</button>
 </div>
 
 
-
+<div id="search-results" style="display: ruby;">
 {{#each hits as |hit|}}
+<div class={{hit.recipe.uri}} id="classIdentifier">
 <div class="card" style="width: 18rem;">
   <img src="{{hit.recipe.images.REGULAR.url}}" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">{{hit.recipe.label}}</h5>
-    <p class="card-text">From {{hit.recipe.cuisineType}}</p>
+    <p class="card-text">{{hit.recipe.cuisineType}}</p>
     <p class="card-text">From {{hit.recipe.source}}</p>
   </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item"> Feeds {{hit.recipe.yield}}</li>
     <li class="list-group-item"><a href="{{hit.recipe.url}}" class="card-link">See the Recipe</a></li>
-    <li class="list-group-item"><a href="#" class= "button">ADD TO MY LIST</a></li>
+    <button id='add-recipe' class= "button">ADD TO MY LIST</button>
   </ul>
 </div>
+</div>
 {{/each}}
-
+</div>
 
 <script src="/js/recipe.js"></script>

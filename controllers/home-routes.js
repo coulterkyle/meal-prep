@@ -16,7 +16,7 @@ router.get('/register', (req, res) => {
   res.render('register');
 });
 
-// GET for Login page
+// GET for rendering Login page - redirects to dashboard upon completion
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.loggedIn) {
@@ -28,7 +28,7 @@ router.get('/login', (req, res) => {
 }
 );
 
-// GET for Dashboard page
+// GET for rendering Dashboard page
 router.get('/dashboard', withAuth, async (req, res) => {
   try {
     res.render('dashboard', {
@@ -41,12 +41,12 @@ router.get('/dashboard', withAuth, async (req, res) => {
 
 // GET for Recipes search
 router.get('/recipes/:search', async (req, res) => {
-  console.log("from here", req.params)
+
   let recipeURL = `https://api.edamam.com/api/recipes/v2?type=public&q=${req.params.search}&app_id=${process.env.APP_ID}&app_key=${process.env.API_KEY}`;
   let data = await fetch(recipeURL);
   const newdata = await data.json();
-  var hits = newdata.hits
-  // console.log('homeroutes', hits)
+  let hits = newdata.hits
+
   res.render('recipes', {
     loggedIn: req.session.loggedIn,
     hits: hits
