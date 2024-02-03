@@ -16,7 +16,7 @@ Recipe.init(
       allowNull: false,
     },
     recipe_thumbnail: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(5000),
       //   allowNull: false,
     },
     recipe_ingredients: {
@@ -28,7 +28,7 @@ Recipe.init(
       //   allowNull: false,
     },
     recipe_instructions: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       //   allowNull: false,
     },
     user_id: {
