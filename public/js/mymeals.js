@@ -7,7 +7,5 @@ async function deleteMeals(id){
             headers: { 'Content-Type': 'application/json' },
         });
     }
-    if (response.ok){
-        
-    }
+
 }
