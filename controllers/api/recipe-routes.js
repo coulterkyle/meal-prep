@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { json } = require('sequelize');
+// const { json } = require('sequelize');
 const { User, Recipe } = require('../../models');
 
 //WHY SEND THIS DATA BACK TO THE FRONT END? COMMIT IT TO THE DATABASE FROM THE BACKEND
@@ -9,7 +9,7 @@ router.post('/', async (req, res) => {
     let recipeUri = `https://api.edamam.com/api/recipes/v2/by-uri?type=public&uri=${encodedUri}&app_id=${process.env.APP_ID}&app_key=${process.env.API_KEY}`;
     let data = await fetch(recipeUri);
     const newData = await data.json();
-    // console.log(typeof newData.hits[0].recipe.images.REGULAR.url)
+    console.log(recipeUri)
     const newEntry = await Recipe.create({
       recipe_name: newData.hits[0].recipe.label,
       recipe_ingredients: newData.hits[0].recipe.ingredientLines,
