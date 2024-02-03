@@ -1,14 +1,15 @@
 <div id="search-results" style="display: ruby;">
-{{#each recipes as |recipe|}}
 <div class="card" style="width: 18rem;">
-  {{!-- <img src="{{hit.recipe.images.REGULAR.url}}" class="card-img-top" alt="...">
-  <div class="card-body"> --}}
-    <h5 class="card-title">{{recipe.recipe_name}}</h5>
+  {{!-- <div class="card-body">
+    <img src="{{recipe.recipe_thumbnail}}" class="card-img-top" alt="recipe thumbnail">
+    <h5 class="card-title">{{recipe.recipe_name}}</h5> --}}
     <ul>
+    {{#each recipes as |recipe|}} 
     {{#each recipe.recipe_ingredients as |ingredients|}}
     <li class="card-text">{{ingredients}}</li>
     {{/each}}
+    {{/each}}
     </ul>
+    <button onclick='deleteMeals("{{recipe.id}}");'>DELETE</button>
 </div>
-{{!-- </div> --}}
-{{/each}}
+</div>

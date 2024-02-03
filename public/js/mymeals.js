@@ -6,6 +6,7 @@ async function deleteMeals(id){
             method: "DELETE",
             headers: { 'Content-Type': 'application/json' },
         });
+
         if (deleteRequest.ok){
             const rePopulate = await fetch('/mymeals', {
                 method: "GET",
