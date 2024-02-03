@@ -16,7 +16,7 @@ Recipe.init(
       allowNull: false,
     },
     recipe_thumbnail: {
-      type: DataTypes.STRING(5000),
+      type: DataTypes.TEXT('long'),
       //   allowNull: false,
     },
     recipe_ingredients: {
