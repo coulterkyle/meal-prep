@@ -2,10 +2,68 @@
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;">
+  <select id="meal-select" style="margin-right: 30px;">
+    <option value="" disabled selected>Select your meal type</option>
+    <option value="&mealType=Breakfast">Breakfast</option>
+    <option value="&mealType=Lunch">Lunch</option>
+    <option value="&mealType=Dinner">Dinner</option>
+    <option value="&mealType=Dinner">Snack</option>
+    <option value="&mealType=Teatime">Teatime</option>
+  </select>
   <input type="search" id="searchInput" class="form-control rounded" placeholder="Search for Recipes"
     aria-label="Search" aria-describedby="search-addon" />
   <button type="button" id="search-button" class="btn btn-outline-primary">search</button>
+  </div>
+
+<div class="container" style="margin-top: 10px;">
+<form id="health-checks">
+<input type="checkbox" name="health" value="&health=vegetarian"> 
+<label>Vegetarian</label>
+<input type="checkbox" name="health" value="&health=vegan"> 
+<label>Vegan</label>
+<input type="checkbox" name="health" value="&health=pescatarian"> 
+<label>Pescatarian</label>
+<input type="checkbox" name="health" value="&health=peanut-free"> 
+<label>Peanut-Free</label>
+<input type="checkbox" name="health" value="&health=tree-nut-free"> 
+<label>Tree Nut Free</label>
+<input type="checkbox" name="health" value="&health=crustacean-free"> 
+<label>Crustacean Free</label>
+<input type="checkbox" name="health" value="&health=shellfish-free"> 
+<label>Shellfish Free</label>
+<input type="checkbox" name="health" value="&health=dairy-free"> 
+<label>Dairy Free</label>
+<input type="checkbox" name="health" value="&health=kosher"> 
+<label>Kosher</label>
+<input type="checkbox" name="health" value="&health=pork-free"> 
+<label>Pork Free</label>
+<input type="checkbox" name="health" value="&health=gluten-free"> 
+<label>Gluten Free</label>
+<input type="checkbox" name="health" value="&health=sesame-free"> 
+<label>Sesame free</label>
+<input type="checkbox" name="health" value="&health=wheat-free"> 
+<label>Wheat Free</label>
+<input type="checkbox" name="health" value="&health=paleo"> 
+<label>Paleo</label>
+<input type="checkbox" name="health" value="&health=sulfite-free"> 
+<label>Sulfite Free</label>
+<input type="checkbox" name="health" value="&health=red-meat-free"> 
+<label>Red Meat Free</label>
+<input type="checkbox" name="health" value="&health=low-sugar"> 
+<label>Low Sugar</label>
+<input type="checkbox" name="health" value="&health=kidney-friendly"> 
+<label>Kidney friendly</label>
+<input type="checkbox" name="health" value="&health=DASH"> 
+<label>Dash</label>
+<input type="checkbox" name="health" value="&health=keto-friendly"> 
+<label>Keto Friendly</label>
+<input type="checkbox" name="health" value="&health=fodmap-free"> 
+<label>FODMOP free</label>
+<input type="checkbox" name="health" value="&health=egg-free"> 
+<label>Egg Free</label>
+</form>
 </div>
+
 
 
 <div id="search-results" style="display: ruby;">

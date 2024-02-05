@@ -38,7 +38,21 @@ const result = submitBtn.addEventListener('click', searchEvent);
 
 async function searchEvent(event) {
     event.preventDefault();
-    const search = searchParam.value;
+    healthSpec = []
+    const checkboxes = document.getElementsByName('health')
+    for(let i = 0; i < checkboxes.length; i++){
+        if(checkboxes[i].checked == true){
+            healthSpec.push(checkboxes[i].value)
+        }
+    }
+
+    let stringWithCommas = healthSpec.toString()
+    let stringWithoutCommas = stringWithCommas.split(',').map(s => s.trim()).join('');
+
+    const selectElement = document.querySelector('#meal-select');
+    let mealSelect = selectElement.value
+
+    const search = searchParam.value+=mealSelect+=stringWithoutCommas;
     if (search) {
         window.location.href = `/recipes/${search}`
     }
