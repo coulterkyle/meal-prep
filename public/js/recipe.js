@@ -6,6 +6,12 @@ const addToButton = document.querySelectorAll('#add-recipe')
 //     addToButton[i].addEventListener('click', addToMeals(this.className));
 // }
 
+function changeBtn(uri){
+    const btnToChange = document.getElementById(uri);
+    btnToChange.setAttribute("disabled", "disabled;");
+    btnToChange.textContent = "Recipe Added! ✅";
+    
+}
 
 async function addToMeals(uri) {
     const search = uri;
@@ -22,6 +28,7 @@ async function addToMeals(uri) {
         if (getRequest) {
             // const receivedData = await getRequest.json()
             console.log(getRequest)
+            changeBtn(uri);
         //     alert("ok")
         //     saveRequest = await fetch(`/api/recipe/${search}`, {
         //         method: "POST",

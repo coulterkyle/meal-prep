@@ -81,7 +81,7 @@
     <li class="list-group-item"> Feeds {{hit.recipe.yield}}</li>
     <li class="list-group-item"><a href="{{hit.recipe.url}}" class="card-link">See the Recipe</a></li>
     {{!-- <button onclick='addToMeals({{}}) id='add-recipe' type="button" class={{hit.recipe.uri}}>ADD TO MY LIST</button> --}}
-    <button onclick='addToMeals("{{hit.recipe.uri}}");'>ADD TO MY LIST</button>
+    <button onclick='addToMeals("{{hit.recipe.uri}}");' id={{hit.recipe.uri}}>ADD TO MY LIST</button>
   </ul>
 </div>
 </div>
