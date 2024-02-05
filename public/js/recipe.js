@@ -11,7 +11,7 @@ async function addToMeals(uri) {
     const search = uri;
     let getRequest;
     if (search) {
-        getRequest = await fetch('http://localhost:3001/api/recipes', {
+        getRequest = await fetch('/api/recipes', {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({search})

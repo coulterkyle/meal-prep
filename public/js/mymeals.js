@@ -2,7 +2,7 @@ console.log('linked')
 
 async function deleteMeals(id){
     if (id){
-        const deleteRequest = await fetch(`http://localhost:3001/api/recipes/${id}`, {
+        const deleteRequest = await fetch(`/api/recipes/${id}`, {
             method: "DELETE",
             headers: { 'Content-Type': 'application/json' },
         });
