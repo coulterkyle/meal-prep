@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 
   .myButton {
     color: rgb(255, 255, 255); font-size: 16px; line-height: 16px; padding: 6px; border-radius: 10px; font-family: Georgia, serif; font-weight: normal; text-decoration: none; font-style: normal; font-variant: normal; text-transform: none; background-image: linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%); box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; border: 2px solid rgb(28, 110, 164); display: inline-block;}
@@ -14,3 +15,108 @@
 .card{
   margin: 50px;
 }
+=======
+body {
+  background-image: url("/images/logos/k-c-m-high-resolution-logo-color.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+h1 {
+  background-color: #772953;
+    border-color: #772953;
+    color: azure;
+    text-align: center;
+}
+
+#top-right-image {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 5;
+  right: 0;
+}
+
+#top-left-image {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 5;
+  left: 0;
+}
+
+#bottom-right-image {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#bottom-left-image {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.slideshow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+}
+
+/* #homepage1 {
+  width: 250px;
+  height: 250px;
+}
+
+#homepage2 {
+  width: 250px;
+  height: 250px;
+}
+
+#homepage3 {
+  width: 250px;
+  height: 250px;
+}
+
+#homepage4 {
+  width: 250px;
+  height: 250px;
+}
+
+#homepage5 {
+  width: 250px;
+  height: 250px;
+}
+
+#homepage6 {
+  width: 250px;
+  height: 250px;
+}
+
+#homepage7 {
+  width: 250px;
+  height: 250px;
+}
+
+#homepage8 {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  bottom: 0;
+  right: 1;
+}
+
+#homepage9 {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+} */
+>>>>>>> Stashed changes
