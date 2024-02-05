@@ -6,25 +6,26 @@ const withAuth = require('../utils/auth');
 // GET for Homepage
 router.get('/', async (req, res) => {
   res.render('homepage', {
-    loggedIn: req.session.loggedIn
+    loggedIn: req.session.loggedIn,
+    active: {home: true}
   })
 });
 
 // GET for Register page
 router.get('/register', (req, res) => {
 
-  res.render('register');
+  res.render('register', {active: {register: true }});
 });
 
-// GET for rendering Login page - redirects to dashboard upon completion
+// GET for rendering Login page - redirects to mymeals upon completion
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.loggedIn) {
-    res.redirect('/dashboard');
+    res.redirect('/mymeals');
     return;
   }
 
-  res.render('login');
+  res.render('login', {active: {login: true }});
 }
 );
 
@@ -32,7 +33,7 @@ router.get('/login', (req, res) => {
 router.get('/dashboard', withAuth, async (req, res) => {
   try {
     res.render('dashboard', {
-      loggedIn: true
+      loggedIn: req.session, 
     });
   } catch (err) {
     res.status(500).json(err);
@@ -49,7 +50,8 @@ router.get('/recipes/:search', async (req, res) => {
 
   res.render('recipes', {
     loggedIn: req.session.loggedIn,
-    hits: hits
+    hits: hits,
+    active: {recipes: true },
   })
 });
 
@@ -58,6 +60,7 @@ router.get('/recipes', async (req, res) => {
 
   res.render('recipes', {
     loggedIn: req.session.loggedIn,
+    active: {recipes: true },
   })
 });
 
@@ -75,7 +78,8 @@ router.get('/mymeals', async (req, res) => {
     //renders my meals page with data received from the database
     res.render('mymeals', {
       ...user,
-      loggedIn: true
+      loggedIn: true,
+      active: {mymeals: true }
     });
   } catch (err) {
     res.status(500).json(err);
@@ -96,7 +100,8 @@ router.get('/myshoppinglist', withAuth, async (req, res) => {
     //renders my meals page with data received from the database
     res.render('myshoppinglist', {
       ...user,
-      loggedIn: true
+      loggedIn: true,
+      active: {shoppinglist: true }
     });
   } catch (err) {
     res.status(500).json(err);

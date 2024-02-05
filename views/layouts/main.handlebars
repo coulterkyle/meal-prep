@@ -30,42 +30,26 @@
       <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="/">Home</a>
+            <a class="nav-link {{#if active.home}}active{{/if}}" href="/">Home</a>
           </li>
           {{#if loggedIn}}
           <li class="nav-item">
-            <a class="nav-link" href="/mymeals">My Meals</a>
+            <a class="nav-link {{#if active.mymeals}}active{{/if}}" href="/mymeals">My Meals</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/recipes">Search For Recipes</a>
+            <a class="nav-link {{#if active.recipes}}active{{/if}}" href="/recipes">Search For Recipes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/myshoppinglist">My Shopping List</a>
+            <a class="nav-link {{#if active.shoppinglist}}active{{/if}}" href="/myshoppinglist">My Shopping List</a>
           </li>
-          {{!-- <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-              aria-expanded="false">My Schedule</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Sunday</a>
-              <a class="dropdown-item" href="#">Monday</a>
-              <a class="dropdown-item" href="#">Tuesday</a>
-              <a class="dropdown-item" href="#">Wednesday</a>
-              <a class="dropdown-item" href="#">Thursday</a>
-              <a class="dropdown-item" href="#">Friday</a>
-              <a class="dropdown-item" href="#">Saturday</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Week</a>
-            </div>
-          </li> --}}
           <button type="button" id="logout" class="btn btn-dark">Logout</button>
           <script src="/js/logout.js"></script>
-
           {{else}}
           <li class="nav-item">
-            <a class="nav-link" href="/login">Login</a>
+            <a class="nav-link {{#if active.login}}active{{/if}}" href="/login">Login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/register">Register</a>
+            <a class="nav-link {{#if active.register}}active{{/if}}" href="/register">Register</a>
           </li>
           {{/if}}
   </nav>
