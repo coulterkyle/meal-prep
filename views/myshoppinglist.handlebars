@@ -1,13 +1,14 @@
-<div id="search-results" style="justify-content:center; text-align-center">
-<h1 style="margin-top: 20px; width:500px; margin-left:auto; margin-right:auto;">My Shopping List:</h1>
-  {{!-- <div class="card-body">
-    <img src="{{recipe.recipe_thumbnail}}" class="card-img-top" alt="recipe thumbnail">
-    <h5 class="card-title">{{recipe.recipe_name}}</h5> --}}
-    <ul>
-    {{#each recipes as |recipe|}} 
-    {{#each recipe.recipe_ingredients as |ingredients|}}
-    <li class="card-text">{{ingredients}}</li>
-    {{/each}}
-    {{/each}}
-    </ul>
+<div style="display: flex;">
+  <div id="search-results" style="margin-top: 20px; width:500px; margin-left:auto; margin-right:auto;">
+    <h1 style="margin-top: 20px; width:500px; margin-left:auto; margin-right:auto;">My Shopping List:</h1>
+    <div>
+      <ul>
+        {{#each recipes as |recipe|}}
+        {{#each recipe.recipe_ingredients as |ingredients|}}
+        <li class="card-text">{{ingredients}}</li>
+        {{/each}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
 </div>
