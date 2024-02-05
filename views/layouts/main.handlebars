@@ -20,25 +20,19 @@
 
   <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
     <div class="container-fluid">
-<<<<<<< Updated upstream
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
         aria-controls="navbarColor01" aria-expanded="true" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-=======
       <form class="d-flex">
         <img src="images/logos/k-c-m-logo-color-on-white.png" alt="KCM Logo-test" width="100px" height="100px">
       </form>
->>>>>>> Stashed changes
       <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
             <a class="nav-link active" href="/">Home</a>
           </li>
           {{#if loggedIn}}
-          <li class="nav-item">
-            <a class="nav-link" href="/fridge">My Fridge</a>
-          </li>
           <li class="nav-item">
             <a class="nav-link" href="/mymeals">My Meals</a>
           </li>
@@ -48,7 +42,7 @@
           <li class="nav-item">
             <a class="nav-link" href="/myshoppinglist">My Shopping List</a>
           </li>
-          <li class="nav-item dropdown">
+          {{!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
               aria-expanded="false">My Schedule</a>
             <div class="dropdown-menu">
@@ -62,7 +56,7 @@
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">Week</a>
             </div>
-          </li>
+          </li> --}}
           <button type="button" id="logout" class="btn btn-dark">Logout</button>
           <script src="/js/logout.js"></script>
 
@@ -74,10 +68,6 @@
             <a class="nav-link" href="/register">Register</a>
           </li>
           {{/if}}
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
   </nav>
   <main>
 
