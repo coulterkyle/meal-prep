@@ -9,7 +9,7 @@ This is KCM. It's an application that's meant to allow a user to look up recipes
 
 <a id="item-two"></a>
 ## Usage
-Usage is as simple as vising the site [HERE](https://mymealprep-3c713b753d6b.herokuapp.com/) and signing up or logging in, and searching for meals that you would like to have from the Search for Recipes page. Any meals you add from that page are populated in the My Meals tab, and when you are happy with the selections you've made, you can navigate to the Shopping List page where you can either view the list on your phone, or print it.
+Usage is as simple as visiting the site [HERE](https://mymealprep-3c713b753d6b.herokuapp.com/) and signing up or logging in, and searching for meals that you would like to have from the Search for Recipes page. Any meals you add from that page are populated in the My Meals tab, and when you are happy with the selections you've made, you can navigate to the Shopping List page where you can either view the list on your phone, or print it.
 
 Login
 ![login photo](./public/images/README%20images/Login.jpg)
