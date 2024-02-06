@@ -8,15 +8,13 @@
 }
 
 /* body {
-  background-image: url("/images/logos/k-c-m-high-resolution-logo-color.jpeg");
+  background-image: url("/images/logos/logo no background.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
 } */
 
 h1 {
-  background-color: #772953;
-    border-color: #772953;
     color: azure;
     text-align: center;
 }
@@ -53,60 +51,5 @@ h1 {
   left: 0;
 }
 
-.slideshow-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; 
-}
 
-/* #homepage1 {
-  width: 250px;
-  height: 250px;
-}
 
-#homepage2 {
-  width: 250px;
-  height: 250px;
-}
-
-#homepage3 {
-  width: 250px;
-  height: 250px;
-}
-
-#homepage4 {
-  width: 250px;
-  height: 250px;
-}
-
-#homepage5 {
-  width: 250px;
-  height: 250px;
-}
-
-#homepage6 {
-  width: 250px;
-  height: 250px;
-}
-
-#homepage7 {
-  width: 250px;
-  height: 250px;
-}
-
-#homepage8 {
-  width: 250px;
-  height: 250px;
-  position: absolute;
-  bottom: 0;
-  right: 1;
-}
-
-#homepage9 {
-  width: 250px;
-  height: 250px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-} */
