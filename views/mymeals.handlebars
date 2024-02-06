@@ -1,7 +1,7 @@
 <div id="search-results" style="display: ruby;">
 {{#each recipes as |recipe|}}
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
+<div class="card" style="width: 18rem; border-radius: 20px; box-shadow: 10px 5px 5px rgb(142, 133, 133);">
+  <div class="card-body" style="text-align: center;">
     <img src="{{recipe.recipe_thumbnail}}" class="card-img-top" alt="recipe thumbnail">
     <h5 class="card-title">{{recipe.recipe_name}}</h5>
     <ul>
@@ -9,7 +9,10 @@
     <li class="card-text">{{ingredients}}</li>
     {{/each}}
     </ul>
-    <button onclick='deleteMeals("{{recipe.id}}");'>Remove from My List</button>
+    <button onclick='deleteMeals("{{recipe.id}}");' 
+    style="background-color: #f26666;
+    font-weight: 400;
+    border-radius: 20px">Remove from My List</button>
 </div>
 </div>
 {{/each}}

@@ -70,9 +70,9 @@
   <div class="card-group" style="justify-content: center;">
 {{#each hits as |hit|}}
 <div class={{hit.recipe.uri}} id="classIdentifier">
-<div class="card" style="width: 18rem;">
+<div class="card" style="width: 18rem; border-radius: 10px; box-shadow: 10px 5px 5px rgb(142, 133, 133);">
   <img src="{{hit.recipe.images.REGULAR.url}}" class="card-img-top" alt="...">
-  <div class="card-body">
+  <div class="card-body" style="text-align: center;">
     <h5 class="card-title">{{hit.recipe.label}}</h5>
     <p class="card-text">{{hit.recipe.cuisineType}}</p>
     <p class="card-text">From {{hit.recipe.source}}</p>
@@ -80,8 +80,7 @@
   <ul class="list-group list-group-flush">
     <li class="list-group-item"> Feeds {{hit.recipe.yield}}</li>
     <li class="list-group-item"><a href="{{hit.recipe.url}}" class="card-link">See the Recipe</a></li>
-    {{!-- <button onclick='addToMeals({{}}) id='add-recipe' type="button" class={{hit.recipe.uri}}>ADD TO MY LIST</button> --}}
-    <button onclick='addToMeals("{{hit.recipe.uri}}");' id={{hit.recipe.uri}}>ADD TO MY LIST</button>
+    <button onclick='addToMeals("{{hit.recipe.uri}}");' id={{hit.recipe.uri}} style="border-radius:10px; background-color:rgb(105, 175, 105); color:white">ADD TO MY LIST</button>
   </ul>
 </div>
 </div>
