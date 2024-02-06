@@ -7,14 +7,14 @@ const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
   res.render('homepage', {
     loggedIn: req.session.loggedIn,
-    active: {home: true}
+    active: { home: true }
   })
 });
 
 // GET for Register page
 router.get('/register', (req, res) => {
 
-  res.render('register', {active: {register: true }});
+  res.render('register', { active: { register: true } });
 });
 
 // GET for rendering Login page - redirects to mymeals upon completion
@@ -25,7 +25,7 @@ router.get('/login', (req, res) => {
     return;
   }
 
-  res.render('login', {active: {login: true }});
+  res.render('login', { active: { login: true } });
 }
 );
 
@@ -33,7 +33,7 @@ router.get('/login', (req, res) => {
 router.get('/dashboard', withAuth, async (req, res) => {
   try {
     res.render('dashboard', {
-      loggedIn: req.session, 
+      loggedIn: req.session,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -51,7 +51,7 @@ router.get('/recipes/:search', async (req, res) => {
   res.render('recipes', {
     loggedIn: req.session.loggedIn,
     hits: hits,
-    active: {recipes: true },
+    active: { recipes: true },
   })
 });
 
@@ -60,7 +60,7 @@ router.get('/recipes', async (req, res) => {
 
   res.render('recipes', {
     loggedIn: req.session.loggedIn,
-    active: {recipes: true },
+    active: { recipes: true },
   })
 });
 
@@ -79,7 +79,7 @@ router.get('/mymeals', async (req, res) => {
     res.render('mymeals', {
       ...user,
       loggedIn: true,
-      active: {mymeals: true }
+      active: { mymeals: true }
     });
   } catch (err) {
     res.status(500).json(err);
@@ -101,7 +101,7 @@ router.get('/myshoppinglist', withAuth, async (req, res) => {
     res.render('myshoppinglist', {
       ...user,
       loggedIn: true,
-      active: {shoppinglist: true }
+      active: { shoppinglist: true }
     });
   } catch (err) {
     res.status(500).json(err);
