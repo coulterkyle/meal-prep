@@ -1,9 +1,7 @@
 const router = require('express').Router();
-// const { json } = require('sequelize');
 const { User, Recipe } = require('../../models');
 
-
-//WHY SEND THIS DATA BACK TO THE FRONT END? COMMIT IT TO THE DATABASE FROM THE BACKEND
+//gets data from edamam api
 router.post('/', async (req, res) => {
   try {
     const encodedUri = encodeURIComponent(req.body.search)
